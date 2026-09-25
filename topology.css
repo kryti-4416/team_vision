@@ -1,0 +1,78 @@
+.map{height:350px;background:#18383b url('./assets/gridsense-satellite.jpg') center/cover no-repeat}
+.map:before{content:'';position:absolute;inset:0;background:#07152245;pointer-events:none}
+.map:after{z-index:4}
+.topology-lines{position:absolute;inset:0;width:100%;height:100%;z-index:1;overflow:visible}
+.topology-lines line{fill:none;stroke-width:.7;stroke-dasharray:2 1.5;vector-effect:non-scaling-stroke}
+.topology-lines .active-link{stroke:#42e69b;filter:drop-shadow(0 0 2px #42e69b99)}
+.topology-lines .alternative-link{stroke:#409cff}
+.topology-lines .broken-link{stroke:#ff5660}
+.map-point{position:absolute;z-index:2;transform:translate(-50%,-50%);border:0;background:transparent;cursor:pointer}
+.map-point i{display:block;width:13px;height:13px;border:2px solid #d4ffec;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px #46d99b35}
+.map-point.offline i{background:var(--red);border-color:#ffe1e3;box-shadow:0 0 0 5px #fa687238}
+.map-point.unknown i{background:var(--amber);border-color:#fff2ca;box-shadow:0 0 0 5px #ffc05b35}
+.map-point b{display:block;margin-top:6px;padding:3px 5px;border:1px solid #345166;border-radius:4px;background:#061320e8;font:9px var(--mono);white-space:nowrap}
+.map-gateway{position:absolute;z-index:3;transform:translate(-50%,-50%);padding:7px 8px;border:1px solid #7cceff;border-radius:7px;background:#0d4871;color:#e1f5ff;font:9px var(--mono);box-shadow:0 0 16px #229ee355}
+.link-legend{display:flex;gap:12px;flex-wrap:wrap;padding:0 13px 11px;color:#91a8b9;font-size:9px}
+.link-legend span{display:flex;align-items:center;gap:6px}
+.link-swatch{width:20px;border-top:2px dashed #42e69b}
+.link-swatch.alternative{border-color:#409cff}
+.link-swatch.broken{border-color:#ff5660}
+.topology-lines line{stroke-width:2.5px;stroke-dasharray:8 5}
+.map-point b{font-size:12px;padding:4px 7px}
+.map-point i{width:16px;height:16px;border-width:3px}
+.map-gateway{font-size:11px;padding:8px 10px}
+.link-legend{font-size:11px;gap:16px}
+.link-swatch{width:25px;border-top-width:3px}
+.settings-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:13px}
+.settings-form label{display:grid;gap:5px;color:#9cb1c0;font-size:10px}
+.settings-form input,.settings-form select{width:100%;padding:9px;border:1px solid #294258;border-radius:6px;background:#091a29;color:var(--text)}
+.settings-form button{align-self:end;width:max-content;padding:9px 12px;border:1px solid #258bc7;border-radius:6px;background:#126492;color:#eff9ff;cursor:pointer}
+.settings-form .wide{grid-column:1/-1}
+.config-remove{padding:6px 9px;border:1px solid #99404a;border-radius:6px;background:#752e37;color:white;cursor:pointer;font-size:9px}
+.node-config-line{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 14px;border-bottom:1px solid var(--line)}
+.node-config-line small{display:block;margin-top:4px;color:var(--muted);font-size:9px}
+.settings-note{margin:13px}
+@media(max-width:520px){.settings-form{grid-template-columns:1fr}.settings-form .wide{grid-column:auto}}
+
+/* Readability pass: slightly larger dashboard type, including compact table labels. */
+body{font-size:16px}
+.brand small{font-size:10px}
+.top-status small{font-size:9px}
+.top-status b{font-size:11px}
+.sidebar nav a span{font-size:14px}
+.side-caption,.eyebrow{font-size:10px}
+.side-foot b{font-size:11px}
+.side-foot p,.page-head p{font-size:12px}
+h1{font-size:29px}
+.sample-pill{font-size:10px}
+.stat small{font-size:10px}
+.stat strong{font-size:28px}
+.stat em{font-size:11px}
+.panel-head strong{font-size:14px}
+.panel-head small{font-size:11px}
+th{font-size:9px}
+td{font-size:12px}
+.node-id{font-size:11px}
+.badge{font-size:9px}
+.event{font-size:12px}
+.event time{font-size:10px}
+.heat-controls label,.heat-controls select{font-size:12px}
+.scale,.legend,.link-legend{font-size:11px}
+.heat-pin{font-size:11px;padding:6px 8px}
+.map-point b{font-size:13px}
+.map-gateway{font-size:12px}
+.node-card header{font-size:13px}
+.node-card .muted{font-size:12px}
+.reading small{font-size:10px}
+.reading b{font-size:14px}
+.settings-note{font-size:12px}
+.settings-form label,.settings-form input,.settings-form select{font-size:12px}
+.config-remove{font-size:10px}
+.node-config-line small{font-size:10px}
+.emergency-alert strong{font-size:13px}
+.emergency-alert p,.emergency-alert button{font-size:12px}
+footer{font-size:9px}
+
+/* Stronger route contrast on satellite imagery. */
+.topology-lines line{stroke-width:3.5px;stroke-dasharray:10 6}
+.link-swatch{border-top-width:4px}

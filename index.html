@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071629">
+  <title>GridSense | Mesh Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="topology.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#overview"><span class="brand-logo">G<span>↗</span></span><span><b>GridSense</b><small>OFF-GRID MESH MONITOR</small></span></a>
+    <div class="top-status"><span class="status-light"></span><span><small>DATA SOURCE</small><b id="sourceStatus">SAMPLE DATA</b></span><i></i><span><small>FIXED GATEWAY</small><b id="gatewayStatus">ONLINE</b></span></div>
+    <time id="clock"></time><button id="menuButton" class="menu-button" aria-label="Toggle navigation">☰</button>
+  </header>
+  <aside class="sidebar" id="sidebar">
+    <div class="side-caption">COMMAND CENTER</div>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="#overview" data-view="overview" class="active">⌂ <span>Overview</span></a>
+      <a href="#network" data-view="network">⌘ <span>Network map</span></a>
+      <a href="#nodes" data-view="nodes">▦ <span>Node details</span></a>
+      <a href="#heatmap" data-view="heatmap">◉ <span>Heatmap</span></a>
+      <a href="#events" data-view="events">♧ <span>Alerts &amp; events</span></a>
+      <a href="#logs" data-view="logs">≡ <span>Data logs</span></a>
+      <a href="#settings" data-view="settings">⚙ <span>Settings</span></a>
+    </nav>
+    <div class="side-foot"><b>OFF-GRID READY</b><p>Mesh telemetry works without internet infrastructure.</p></div>
+  </aside>
+  <main class="main" id="main">
+    <div id="emergencyAlerts" class="emergency-alerts" role="alert" aria-live="assertive"></div>
+    <div class="page-head"><div><div class="eyebrow" id="eyebrow">LIVE FIELD OVERVIEW</div><h1 id="pageTitle">Overview</h1><p id="pageSubtitle">Environmental telemetry from your LoRa mesh.</p></div><span class="sample-pill"><i></i> Demo values · not live hardware</span></div>
+    <section id="viewRoot"></section>
+    <footer>GRIDSENSE FIELD CONSOLE <span id="updatedAt"></span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
